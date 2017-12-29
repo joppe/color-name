@@ -17,6 +17,7 @@ if (color.length !== 6) {
     console.log(chalk.red.bold('Invalid color, use hex notation, 6 characters long.'));
     return;
 }
+
 getColorName(color).then((colorName) => {
-    console.log(chalk.hex(color).bold(colorName));
+    console.log(chalk.hex(color).bold('\u25A0'), `$${colorName}: #${color};`);
 });
