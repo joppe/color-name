@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "bin": {
-    "color-name": "bin/color-name"
+    "color-name": "bin/color-name.js"
   },
   "author": "Joppe Aarts <joppe@apestaartje.info>",
   "license": "MIT",
