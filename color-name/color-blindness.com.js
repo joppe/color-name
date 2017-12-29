@@ -33,7 +33,6 @@ function createColorName(name, hue) {
 module.exports.getColorName = async function (color) {
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
-    const test = 'TEST';
 
     await page.goto(URL, {
         waitUntil: 'networkidle2'
