@@ -11,4 +11,4 @@ to get the name of a color.
 ## Install
 
 The script requires `nodejs >= 8`. Install the script `npm install git+https://github.com/joppe/color-name.git`. The 
-script can now be used by typing `./bin/color-name.js ff0000`.
+script can now be used by typing `node_modules/.bin/color-name f03455`.
