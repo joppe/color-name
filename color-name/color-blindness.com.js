@@ -28,10 +28,14 @@ function createColorName(name, hue) {
 
 /**
  * @param {string} color, hexadecimal notation of a color
+ * @param {boolean} [noSandbox=false], whether to start browser in no sandbox mode
  * @returns {string}
  */
-module.exports.getColorName = async function (color) {
-    const browser = await puppeteer.launch();
+module.exports.getColorName = async function (color, noSandbox = false) {
+    const args = noSandbox ? ['--no-sandbox', '--disable-setuid-sandbox'] : [];
+    const browser = await puppeteer.launch({
+        args
+    });
     const page = await browser.newPage();
 
     await page.goto(URL, {
