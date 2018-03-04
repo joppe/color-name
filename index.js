@@ -1,22 +1,10 @@
 const chalk = require('chalk');
 const getColorName = require('./dist/color-blindness.com').getColorName;
-const colors = [];
-let noSandbox = false;
-
-process.argv.forEach((arg, i) => {
-    if (i < 2) {
-        return;
-    }
-
-    if (arg === '--no-sandbox') {
-        noSandbox = true;
-    } else {
-        colors.push(arg);
-    }
-});
+const colors = process.argv.slice(2);
+const config = require('./config/config.json');
 
 try {
-    getColorName(colors, noSandbox).then((results) => {
+    getColorName(colors, config.noSandbox).then((results) => {
         for (const result of results) {
             console.log(chalk.hex(result.hex).bold('\u25A0'), `$${result.name}: #${result.hex};`);
         }
