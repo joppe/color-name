@@ -3,13 +3,35 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "lint": "tslint --config ./tslint.json --project tsconfig.json",
+    "test": "karma start karma.conf.js",
+    "test:watch": "karma start karma.conf.js --no-single-run --auto-watch"
+  },
   "bin": {
     "color-name": "bin/color-name.js"
   },
-  "author": "Joppe Aarts <joppe@apestaartje.info>",
+  "author": {
+    "name": "Joppe Aarts",
+    "email": "joppe@apestaartje.info"
+  },
   "license": "MIT",
+  "keywords": [
+    "Karma",
+    "TypeScript",
+    "JavaScript",
+    "Jasmine",
+    "Webpack"
+  ],
   "dependencies": {
     "chalk": "^2.3.0",
     "puppeteer": "^0.13.0"
+  },
+  "devDependencies": {
+    "@types/puppeteer": "^1.0.0",
+    "tslint": "^5.9.1",
+    "tslint-microsoft-contrib": "^5.0.2",
+    "typescript": "^2.7.1"
   }
 }
