@@ -1,13 +1,10 @@
 {
-  "name": "color-name",
+  "name": "@apestaartje/color-name",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "webpack",
-    "lint": "tslint --config ./tslint.json --project tsconfig.json",
-    "test": "karma start karma.conf.js",
-    "test:watch": "karma start karma.conf.js --no-single-run --auto-watch"
+    "lint": "tslint --config ./tslint.json --project tsconfig.json"
   },
   "bin": {
     "color-name": "bin/color-name.js"
@@ -18,11 +15,8 @@
   },
   "license": "MIT",
   "keywords": [
-    "Karma",
     "TypeScript",
-    "JavaScript",
-    "Jasmine",
-    "Webpack"
+    "JavaScript"
   ],
   "dependencies": {
     "chalk": "^2.3.0",
